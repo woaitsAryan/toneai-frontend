@@ -35,7 +35,7 @@ export default function Hero() {
             </p>
             <div className="flex justify-center pointer-events-auto font-normal gap-4 text-lg" onClick={() => setDialogOpen(true)}>
               <LandingButton >
-                Ready to decode the internet? Try toneAI for free!
+                Try ToneAI for free!
               </LandingButton>
             </div>
           </section>

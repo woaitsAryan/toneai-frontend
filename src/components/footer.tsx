@@ -12,16 +12,16 @@ export default function Footer() {
       <HoverCardTrigger asChild>
         <Button variant="link" className="text-base px-1">Disha Goyal</Button>
       </HoverCardTrigger>
-      <HoverCardContent>
-        github.com/wopdkas
+      <HoverCardContent className="bg-white/60">
+        Check out my <a href="https://github.com/disgoy" className="underline text-blue-500" target="_blank" rel="noopener noreferrer">Github</a> and <a href="https://www.linkedin.com/in/dishagoyal15/" className="underline text-blue-500" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
       </HoverCardContent>
     </HoverCard> and
       <HoverCard>
         <HoverCardTrigger asChild>
           <Button variant="link" className="text-base px-1">Aryan Bharti</Button>
         </HoverCardTrigger>        
-        <HoverCardContent>
-          The React Framework – created and maintained by @vercel.
+        <HoverCardContent className="bg-white/60">
+          Check out my <a href="https://github.com/woaitsAryan" className="underline text-blue-500" target="_blank" rel="noopener noreferrer">Github</a> and <a href="https://www.linkedin.com/in/aryanbharti/" className="underline text-blue-500" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
         </HoverCardContent>
       </HoverCard></div>
   </footer>
