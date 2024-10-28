@@ -14,19 +14,34 @@ interface FaqItem {
 const faqItems: FaqItem[] = [
   {
     id: "item-1",
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    question: "What exactly does toneAI do?",
+    answer: "We analyze messages to detect irony, sarcasm, and aggression, then suggest appropriate replies. Think of us as your smart friend who's really good at reading between the lines!"
   },
   {
     id: "item-2",
-    question: "Is it styled?",
-    answer: "Yes. It comes with default styles that matches the other components' aesthetic.",
+    question: "How accurate is it?",
+    answer: "Our AI model is trained on 58 million tweets with 94.6% accuracy in tone detection. But remember, even humans misread messages sometimes!"
   },
   {
     id: "item-3",
-    question: "Is it animated?",
-    answer: "Yes. It's animated by default, but you can disable it if you prefer.",
+    question: "Is my data private?",
+    answer: "Your messages are analyzed in real-time and never stored. We value your privacy as much as we value detecting sarcasm (which is a lot!)."
   },
+  {
+    id: "item-4",
+    question: "Will it understand my group chat drama?",
+    answer: "Absolutely! Whether it's passive-aggressive work emails or confusing dating app messages, we've got you covered. We're especially good at decoding those tricky 'k.' responses."
+  },
+  {
+    id: "item-5",
+    question: "Does it work with emojis?",
+    answer: "Yes! We understand that 🙂 hits different than 🙃. Our AI is fluent in emoji and understands their contextual usage in modern communication."
+  },
+  {
+    id: "item-6",
+    question: "How fast does it work?",
+    answer: "Lightning fast! We process your messages in under 200ms. That's faster than the time it takes to overthink a response!"
+  }
 ];
 
 export default function Faqs() {

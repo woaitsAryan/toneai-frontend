@@ -41,9 +41,9 @@ export function Sidebar() {
   return (
     <aside className="sticky inset-y-0 left-0 top-0 z-10 hidden flex-col sm:flex bg-[#e4e4e7] w-48 px-2">
       <nav className="flex flex-col items-start">
-        <div className="h-20 w-40 transition-all group-hover:scale-110 flex justify-center items-center mb-2">
+        <Link href= "/" className="h-20 w-40 transition-all group-hover:scale-110 flex justify-center items-center mb-2">
           <Image width={130} height={20} src={"/logo.png"} alt="Logo" />
-        </div>
+        </Link>
 
         <div className="mt-2 font-geist">
           {sidebarLinks.map((link, index) => (
