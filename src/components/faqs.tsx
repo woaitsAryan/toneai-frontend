@@ -50,7 +50,7 @@ export default function Faqs() {
       <div className="text-center text-3xl font-bold text-neutral-900 md:text-5xl lg:h-12 mt-12 mb-4">
         FAQs
       </div>
-      <Accordion type="single" collapsible className="w-[70%] mx-auto font-geist flex flex-col gap-2">
+      <Accordion type="single" collapsible className="w-[85%] md:w-[70%] mx-auto font-geist flex flex-col gap-2">
         {faqItems.map((item, index) => (
           <AccordionItem key={item.id} value={item.id} className={`${index % 2 == 0 ? "bg-yellow-300/50" : "bg-orange-300/50"} rounded-xl px-2`}>
             <AccordionTrigger className="no-underline">{item.question}</AccordionTrigger>
