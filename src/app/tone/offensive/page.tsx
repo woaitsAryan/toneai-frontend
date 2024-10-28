@@ -3,14 +3,14 @@
 import { Textarea } from "@/components/ui/textarea";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
-import { getIronicInference } from "@/server/ironic";
 import { loadingStates } from "@/lib/loading-states";
 import { getLLMResponse } from "@/server/base";
 import { ToneEnum } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Clipboard } from "lucide-react";
+import { getOffensiveInference } from "@/server/aggresive";
 
-export default function IronicPage() {
+export default function AggresivePage() {
   const [input, setInput] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false)
   const [level, setLevel] = useState<number | null>(null);
@@ -20,7 +20,7 @@ export default function IronicPage() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true)
-    const level = await getIronicInference(input);
+    const level = await getOffensiveInference(input);
     setLevel(level)
     setLoading(false)
   };
@@ -33,7 +33,7 @@ export default function IronicPage() {
 
   const handleLLMResponse = async () => {
     setLoading(true)
-    const output = await getLLMResponse(input, ToneEnum.Ironic);
+    const output = await getLLMResponse(input, ToneEnum.Offensive);
     setLLMResponse(output)
     setLoading(false)
 
@@ -62,7 +62,7 @@ export default function IronicPage() {
         {level && (
           <div className="flex flex-col items-center gap-8">
             <div>
-              That was <span className="underline">{level}</span>% ironic
+              That was <span className="underline">{level}</span>% offensive
             </div>
             {
               llmResponse ? (
@@ -70,7 +70,7 @@ export default function IronicPage() {
                   <div className="text-lg">
                     You could reply with <span className="font-bold">{llmResponse}</span>
                   </div>
-                  {copied ? <span className="text-green-600 text-sm">Copied!</span> : (<Clipboard className="w-6 h-6 cursor-pointer" onClick={handleCopy}/>
+                  {copied ? <span className="text-green-600 text-sm">Copied!</span> : (<Clipboard className="w-6 h-6 cursor-pointer" onClick={handleCopy} />
                   )}
                 </div>
               ) : (

@@ -1,6 +1,6 @@
 "use client";
 
-import { LucideIcon, Phone, Voicemail } from "lucide-react";
+import { Drama, HeartOff, LucideIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -70,12 +70,12 @@ type SidebarLink = {
 export const sidebarLinks: SidebarLink[] = [
   {
     title: "Ironic",
-    icon: Phone,
+    icon: Drama,
     link: "/tone/ironic",
   },
   {
-    title: 'Aggresive',
-    icon: Voicemail,
-    link: '/tone/aggresive'
+    title: 'Offensive',
+    icon: HeartOff,
+    link: '/tone/offensive'
   },
 ];
