@@ -1,6 +1,7 @@
 'use client'
 
 import { Sidebar } from "@/components/tone/sidebar";
+import { TopBar } from "@/components/tone/topbar";
 import { Gradient } from "@/lib/gradient";
 import { useEffect } from "react";
 // import { TopBar } from "@/components/tone/topbar";
@@ -27,7 +28,7 @@ export default function DashboardLayout({
       <div className={"flex-1 w-full h-full flex items-stretch justify-start"}>
         {<Sidebar />}
         <div className={"grid w-full grid-rows-[auto_1fr]"}>
-          {/* <TopBar /> */}
+          <TopBar />
           <div className="overflow-hidden bg-transparent rounded border">
             {children}
           </div>

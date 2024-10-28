@@ -59,7 +59,7 @@ export function Sidebar() {
   );
 }
 
-type SidebarLink = {
+export type SidebarLink = {
   title: string;
   icon: LucideIcon;
   link: string;

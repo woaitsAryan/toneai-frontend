@@ -19,7 +19,7 @@ const cardVariants: Variants = {
 
 export const Testimonials = () => {
   return (
-    <section className="flex flex-col items-center mt-5 mb-12" id="testimonials">
+    <section className="flex flex-col items-center mt-10 md:mt-5 mb-12 md:mx-0 mx-4" id="testimonials">
       <div className="m-auto flex h-max flex-col justify-center text-white  lg:w-1/2 md:pt-12 lg:pt-18 font-gtEss">
         <div
           className="text-center text-3xl font-extrabold text-neutral-900 md:text-5xl lg:h-12"
