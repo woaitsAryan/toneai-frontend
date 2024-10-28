@@ -7,7 +7,6 @@ import { Button } from "./ui/button"
 
 export default function Footer() {
   return <footer className="bottom-0 right-0 h-12 flex flex-row items-center justify-center font-geist text-base" id="footer">
-
     <div>Made with ❤️ by <HoverCard>
       <HoverCardTrigger asChild>
         <Button variant="link" className="text-base px-1">Disha Goyal</Button>

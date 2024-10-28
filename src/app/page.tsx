@@ -1,9 +1,6 @@
 "use client";
 import { Testimonials } from "@/components/testimonials";
 import Hero from "@/components/landing/hero";
-// import { MouseEventHandler, useEffect, useRef } from "react";
-// import Navbar from "../components/landing/Navbar";
-// import LandingCard from "@/components/landing/LandingCard";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useEffect } from "react";
 import { Gradient } from '@/lib/gradient'
