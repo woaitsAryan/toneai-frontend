@@ -8,8 +8,15 @@ body {
 
 
 #gradient-landing-canvas {
-  --gradient-color-1: #E0F5E9; /* Deep Purple */
-  --gradient-color-2: #FF6B6B; /* Soft Teal */
-  --gradient-color-3: #E0F5E9; /* Light Gray */
-  --gradient-color-4: #FFD93D; /* Charcoal */
+  --gradient-color-1: #E0F5E9; 
+  --gradient-color-2: #FF6B6B; 
+  --gradient-color-3: #E0F5E9; 
+  --gradient-color-4: #FFD93D; 
+}
+
+#gradient-landing-dashboard {
+  --gradient-color-1: #E0F7FA; /* Light Sky Blue */
+  --gradient-color-2: #81D4FA; /* Vibrant Sky Blue */
+  --gradient-color-3: #4DD0E1; /* Vibrant Cyan */
+  --gradient-color-4: #BBDEFB; /* Light Blue */
 }

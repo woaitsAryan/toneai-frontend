@@ -20,9 +20,9 @@ function SidebarLink({ link, pathname }: SidebarLinkProps) {
     <Link href={link.link} key={link.link}>
       <button
         className={cn(
-          "flex items-center space-x-1 min-w-[160px] mb-1 p-3 hover:bg-white transition-colors rounded-xl border-2 duration-200 hover:border-blue-500",
+          "flex items-center space-x-1 min-w-[160px] mb-1 p-3 hover:bg-white transition-colors rounded-xl border-2 border-transparent duration-200 hover:border-blue-500/80",
           pathname?.includes(link.link) &&
-          "bg-white border-blue-500"
+          "bg-white border-blue-500/80"
         )}
       >
         <div className="flex items-center justify-center rounded-lg transition-colors">
@@ -39,7 +39,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky inset-y-0 left-0 top-0 z-10 hidden flex-col sm:flex bg-[#e4e4e7] w-48 px-2">
+    <aside className="sticky inset-y-0 left-0 top-0 z-10 hidden flex-col sm:flex bg-white/60 backdrop-blur-3xl w-48 px-2">
       <nav className="flex flex-col items-start">
         <Link href= "/" className="h-20 w-40 transition-all group-hover:scale-110 flex justify-center items-center mb-2">
           <Image width={130} height={20} src={"/logo.png"} alt="Logo" />
