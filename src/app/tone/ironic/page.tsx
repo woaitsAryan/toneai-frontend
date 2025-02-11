@@ -3,12 +3,10 @@
 import { Textarea } from "@/components/ui/textarea";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
-import { getIronicInference } from "@/server/ironic";
 import { loadingStates } from "@/lib/loading-states";
-import { getLLMResponse } from "@/server/base";
-import { ToneEnum } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Clipboard } from "lucide-react";
+import { generateLLMOutput, isIronic } from "@/app/server/file";
 
 export default function IronicPage() {
   const [input, setInput] = useState<string>("");
@@ -20,7 +18,7 @@ export default function IronicPage() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true)
-    const level = await getIronicInference(input);
+    const level = await isIronic(input);
     setLevel(level)
     setLoading(false)
   };
@@ -32,8 +30,8 @@ export default function IronicPage() {
   };
 
   const handleLLMResponse = async () => {
-    setLoading(true)
-    const output = await getLLMResponse(input, ToneEnum.Ironic);
+    setLoading(true)  
+    const output = await generateLLMOutput(input)
     setLLMResponse(output)
     setLoading(false)
 

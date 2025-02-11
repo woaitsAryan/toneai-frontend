@@ -3,12 +3,10 @@
 import { Textarea } from "@/components/ui/textarea";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
-import { loadingStates } from "@/lib/loading-states";
-import { getLLMResponse } from "@/server/base";
-import { ToneEnum } from "@/lib/types";
+import { loadingStates } from "@/lib/loading-states"
 import { Button } from "@/components/ui/button";
 import { Clipboard } from "lucide-react";
-import { getOffensiveInference } from "@/server/aggresive";
+import { generateLLMOutput, isOffensive } from "@/app/server/file";
 
 export default function AggresivePage() {
   const [input, setInput] = useState<string>("");
@@ -20,7 +18,8 @@ export default function AggresivePage() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true)
-    const level = await getOffensiveInference(input);
+    await isOffensive(input)
+    const level = await isOffensive(input);
     setLevel(level)
     setLoading(false)
   };
@@ -33,7 +32,7 @@ export default function AggresivePage() {
 
   const handleLLMResponse = async () => {
     setLoading(true)
-    const output = await getLLMResponse(input, ToneEnum.Offensive);
+    const output = await generateLLMOutput(input)
     setLLMResponse(output)
     setLoading(false)
 
