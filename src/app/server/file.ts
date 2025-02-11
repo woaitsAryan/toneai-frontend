@@ -21,7 +21,8 @@ export async function isOffensive(text: string) {
     response_format: zodResponseFormat(offensiveOutput, "result")
   })
 
-  const output = JSON.parse(response.choices[0]!.message.content as any) as z.infer<typeof offensiveOutput>
+  //@ts-expect-error bro are you kididng me
+  const output = JSON.parse(response.choices[0]!.message.content) as z.infer<typeof offensiveOutput>
 
   return output.result
 }
@@ -40,7 +41,8 @@ export async function isIronic(text: string) {
     response_format: zodResponseFormat(ironicOutput, "result")
   })
 
-  const output = JSON.parse(response.choices[0]!.message.content as any) as z.infer<typeof ironicOutput>
+  //@ts-expect-error bro are you kididng me
+  const output = JSON.parse(response.choices[0]!.message.content) as z.infer<typeof ironicOutput>
 
   return output.result
 }
